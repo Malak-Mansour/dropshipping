@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dropshipping Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <input type="text" id="searchBar" class="search-bar" placeholder="Search for products...">
+        <button class="toggle-cart-button" onclick="toggleCart()">Shopping Cart</button>
+    </div>
+
+    <div class="products" id="productsContainer">
+        <!-- Updated Product Name -->
+        <div class="product" data-name="Midea Fridge" onclick="window.location.href='product1.html'">
+            <img src="images/fridge inside.jpg" alt="Fridge">
+            <h3>Midea Fridge</h3>
+            <p>$50</p>
+            <button onclick="addToCart('Midea Fridge', 50); event.stopPropagation();">Add to Cart</button>
+        </div>
+
+        <div class="product" data-name="Product 2">
+            <h3>Product 2</h3>
+            <p>$50</p>
+            <button onclick="addToCart('Product 2', 50)">Add to Cart</button>
+        </div>
+        <div class="product" data-name="Product 3">
+            <h3>Product 3</h3>
+            <p>$50</p>
+            <button onclick="addToCart('Product 3', 50)">Add to Cart</button>
+        </div>
+        <div class="product" data-name="Product 4">
+            <h3>Product 4</h3>
+            <p>$50</p>
+            <button onclick="addToCart('Product 4', 50)">Add to Cart</button>
+        </div>
+        <div class="product" data-name="Product 5">
+            <h3>Product 5</h3>
+            <p>$50</p>
+            <button onclick="addToCart('Product 5', 50)">Add to Cart</button>
+        </div>
+        <div class="product" data-name="Product 6">
+            <h3>Product 6</h3>
+            <p>$50</p>
+            <button onclick="addToCart('Product 6', 50)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="shopping-cart" id="shoppingCart">
+        <button class="close-btn" onclick="closeCart()">&times;</button>
+        <h3>Shopping Cart</h3>
+        <div id="cartItems"></div>
+        <p class="total" id="totalPrice">Total: $0</p>
+        <p id="totalItems">Items: 0</p>
+        <button class="clear-cart-button" onclick="clearCart()">Clear All</button>
+    </div>
+</body>
+</html>
